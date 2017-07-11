@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-size: 20px;
+}
+.layout {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.countdown {
+    margin-top:30px;
+    padding: 30px 16px;
+    box-shadow: 2px 4px 8px 0 rgba(0,0,0,.19);
+    background-color: #eee;
+    text-align: center;
+}
+#time-bar {
+    margin: 1em auto;
+    width: 100px;
+    border: 2px solid red;
+    border-radius: 50%;
+    background-color: #FF0;
+    line-height: 100px ;
+}
+.btn-group {
+    display: flex;
+}
+#mytime {
+    flex: 1;
+    padding: 10px;
+    font-size: 15px;
+        color : #f00;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: #FF0;
+}
+#start-btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 15px;
+        color : #f00;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: #FF0;
+}
+#pause-btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 15px;
+        color : #f00;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: #FF0;
+}
+#resume-btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 15px;
+        color : #f00;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: #FF0;
+}
+
