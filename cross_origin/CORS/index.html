@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>CORS</title>
+    <style>
+        .container {
+            width: 900px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <ul id="news">
+        <li>第11日前瞻：中国冲击4金 博尔特再战</li>
+        <li>男双力争会师决赛</li>
+        <li>女排将死磕巴西！</li>
+    </ul>
+    <button id="change">换一组</button>
+</div>
+<script>
+    var news = document.getElementById('news');
+    var btn = document.getElementById('change');
+    btn.addEventListener('click', function () {
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', 'http://127.0.0.1:8080/getNews');
+        xhr.onload = function () {
+            if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
+                successFn(JSON.parse(xhr.responseText));
+            } else {
+                console.log('请求失败');
+            }
+        }
+        xhr.send(null);
+    });
+    function successFn(data) {
+        var html = '';
+        for (var i = 0; i < data.length; i++) {
+            html += '<li>' + data[i] + '</li>';
+        }
+        news.innerHTML = html;
+    }
+</script>
+</body>
+</html>

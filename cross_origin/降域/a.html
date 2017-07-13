@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>降域</title>
+    <style>
+        .container {
+            width: 910px;
+            margin: 0 auto;
+        }
+        .main {
+            float: left;
+            width: 450px;
+            height: 300px;
+            border: 1px solid #ccc;
+        }
+        .main input {
+            margin: 20px;
+            width: 200px;
+        }
+        iframe {
+            float: left;
+            height: 300px;
+            width: 450px;
+            border: 1px dashed #ccc;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>使用降域实现跨域</h1>
+    <div class="main">
+        <input type="text" placeholder="http://a.mamba.com:8080/a.html">
+    </div>
+    <iframe src="http://b.mamba.com:8080/b.html" frameborder="0"></iframe>
+</div>
+<script>
+    // URL: http://a.mamba.com.8080/a.html
+    var aInput = document.querySelector('.main input');
+    aInput.addEventListener('input', function () {
+        window.frames[0].document.querySelector('input').value = this.value;
+    });
+//    document.domain = 'mamba.com';
+</script>
+</body>
+</html>

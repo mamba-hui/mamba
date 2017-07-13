@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>b.html</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+    }
+    input {
+        margin: 20px;
+        width: 200px;
+    }
+</style>
+<body>
+<input id="input" type="text" placeholder="http://b.mamba.com:8080/b.html">
+<script>
+    // URL: http://b.mamba.com.8080/b.html
+    input.addEventListener('input', function () {
+        window.parent.document.querySelector('input').value = this.value;
+    })
+    document.domain = 'mamba.com';
+</script>
+</body>
+</html>

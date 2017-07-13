@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>JSONP</title>
+    <style>
+        .container {
+            width: 900px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <ul class="news">
+        <li>第11日前瞻：中国冲击4金 博尔特再战200米羽球</li>
+        <li>正直播柴飚/洪炜出战 男双力争会师决赛</li>
+        <li>女排将死磕巴西！郎平安排男陪练模仿对方核心</li>
+    </ul>
+    <button id="change">换一组</button>
+</div>
+<script>
+    var btn = document.getElementById('change');
+    var news = document.querySelector('.news');
+    btn.addEventListener('click', function (e) {
+        jsonp('http://127.0.0.1:8080/getNews', changeNews);  //虽然localhoust与127.0.0.1的ip相同，仍然属于跨域
+    });
+    // 封装的JSONP, 调用后异步执行callback(data)
+    function jsonp(url, callback) {
+        var script = document.createElement('script');
+        script.src = url + '?callback=' + callback.name;  //拼装基本的JSONP请求
+        document.head.appendChild(script);   //动态的添加script元素，异步执行
+        document.head.removeChild(script);   //删除该标签，
+    }
+    // callback函数，通过JSONP被调用，
+    function changeNews(data) {
+        var html = '';
+        for (var i = 0; i < data.length; i++) {
+            html += '<li>' + data[i] + '</li>'
+        }
+        news.innerHTML = html;
+    }
+</script>
+</body>
+</html>
