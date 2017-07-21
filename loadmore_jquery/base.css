@@ -1,0 +1,41 @@
+ul, li {
+    margin: 0;;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+#news li {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.hover {
+    background-color: green;
+    color: #fff;
+}
+
+.btn {
+    width: 80px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 3px;
+    color: #E27272;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+}
+
+#loadmore {
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+#loadmore img {
+    width: 40px;
+    height: 40px;
+}
