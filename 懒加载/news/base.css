@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+.news > li {
+    margin-top: 20px;
+}
+.news > li > a {
+    display: block;
+    text-decoration: none;
+    color: #ccc;
+}
+.news .image-wrap {
+    float: left;
+    margin-right: 10px;
+}
+.news .image-wrap img {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+}
+.news h2 {
+    font-size: 16px;
+    color: #333;
+}
+.news p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.container > p {
+    visibility: hidden;
+    color: #f00;
+    text-align: center;
+}
