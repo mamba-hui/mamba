@@ -1,0 +1,71 @@
+body, ul, li {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.carousel {
+    position: relative;
+    margin: 20px auto;
+    width: 400px;
+    height: 250px;
+    overflow: hidden;
+}
+.carousel .images-wrap {
+    position: absolute;
+}
+.carousel .images-wrap li{
+    float: left;
+}
+.carousel .images-wrap a {
+    display: block;
+}
+.carousel .images-wrap img {
+    width: 400px;
+    height: 250px;
+    vertical-align: middle;
+}
+.carousel .arrow {
+    position: absolute;
+    display: block;
+    top: 50%;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    line-height: 30px;
+}
+.carousel .prev {
+    left: 10px;
+}
+.carousel .next {
+    right: 10px;
+}
+.carousel .bullet {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 0;
+    text-align: center;
+}
+.carousel .bullet li {
+    display: inline-block;
+    width: 30px;
+    height: 6px;
+    margin: 10px 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.carousel .bullet li.active {
+    background-color: #f00;
+}
