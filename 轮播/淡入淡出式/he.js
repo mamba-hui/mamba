@@ -34,10 +34,11 @@ $(function () {
     function play(num) {
         if(!isAnimated) {
             isAnimated = true;
+            let oldIdx = idx;
             idx = (idx + num + imgCount) % imgCount; //注意利用取余方法简化idx值的计算
             console.log(idx);
-            $imgs.fadeOut(500)
-                .eq(idx).fadeIn(500, function () {
+            $imgs.eq(oldIdx).fadeOut(500);
+            $imgs.eq(idx).fadeIn(500, function () {
                 setbullet();
                 isAnimated = false;
             });
