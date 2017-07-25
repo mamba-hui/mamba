@@ -1,0 +1,50 @@
+body, ul, li {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+.waterfall-ct {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.waterfall-ct .news {
+    position: relative;
+}
+.waterfall-ct .item {
+    position: absolute;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #DFDFDF;
+    width: 258px;
+    transition: all 1s;
+}
+
+.waterfall-ct .img-ct {
+    display: block;
+}
+.waterfall-ct .img-ct img {
+    width: 258px;
+    vertical-align: middle;
+}
+.waterfall-ct h4 {
+    margin: 10px 3px;
+    height: 25px;
+    border-bottom: 1px solid #DFDFDF;
+}
+.waterfall-ct .brief {
+    margin: 0 5px;
+    color: #333;
+    font-size: 12px;
+}
+#hide {
+    display: none;
+    position: absolute;
+    width: 300px;
+}
