@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.img-container {
+    width: 1000px;
+    margin: 0 auto ;
+}
+
+.img-box {
+    display: block;
+    float: left;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.img-box img {
+    vertical-align: middle;
+}
