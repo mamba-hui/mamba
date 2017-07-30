@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            margin: 30px;
+            height: 2000px;
+        }
+
+        .wraper {
+            position: relative;
+            margin: 0 auto;
+            width: 400px;
+            height: 300px;
+            border: 2px solid #f00;
+        }
+
+        .scroll {
+            height: 100%;
+            overflow: auto;
+        }
+
+        .inner {
+            height: 1000px;
+            background: linear-gradient(180deg, red, blue);
+        }
+
+        .btn {
+            display: inline-block;
+            height: 30px;
+            background-color: #000;
+            width: 60px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            box-shadow: 2px 4px 16px rgba(0, 0, 0, .4);
+        }
+
+        .go-top {
+            right: 20px;
+            bottom: 20px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<div class="wraper">
+    <div class="scroll" id="aaa">
+        <div class="inner"></div>
+    </div>
+</div>
+
+<script>
+    function GoTop(container) {
+        this.ct = container;
+        this.target = this.createNode();
+        this.bindEvent();
+    }
+
+    GoTop.prototype.bindEvent = function () {
+        this.target.addEventListener('click', () => {
+            this.ct.scrollTop = 0;
+        })
+    };
+
+    GoTop.prototype.createNode = function () {
+        let btn = document.createElement('div');
+        btn.classList.add('btn', 'go-top');
+        btn.style.position = this.ct === document.querySelector('body') ? 'fixed' : 'absolute';
+        this.ct.appendChild(btn);
+        return btn;
+    };
+
+    let ct1 = document.querySelector('#aaa');
+    let ct2 = document.querySelector('body');
+    let goTop1 = new GoTop(ct1);
+    let goTop2 = new GoTop(ct2);
+</script>
+</body>
+</html>
