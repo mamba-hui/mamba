@@ -1,0 +1,68 @@
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.carousel {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    overflow: hidden;
+}
+.carousel .image-wrap {
+    position: absolute;
+}
+.carousel .image-wrap li {
+    float: left;
+}
+.carousel .image-box {
+    display: block;
+}
+.carousel .image-box img {
+    width: 400px;
+    height: 250px;
+    vertical-align: middle;
+}
+.carousel .arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.carousel .prev {
+    left: 10px;
+}
+.carousel .next {
+    right: 10px;
+}
+.carousel .indicator {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0;
+}
+.carousel .indicator li {
+    display: inline-block;
+    width: 30px;
+    height: 6px;
+    margin: 10px 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}   
+.carousel .indicator li.active {
+    background-color: #f00;
+}
