@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+}
+
+.calendar {
+    width: 17em;
+    border: 1px solid #ccc;
+    font-family: serif, cursive, fantasy;
+
+}
+
+.calendar .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2em;
+    padding: 0 .5em;
+    line-height: 2em;
+    background-color: #CA2B2B;
+    color: #fff;
+}
+
+.calendar .arrow {
+    border: .5em solid transparent;
+    cursor: pointer;
+}
+
+.calendar .prev {
+    border-right-color: #fff;
+}
+
+.calendar .next {
+    border-left-color: #fff;
+}
+
+.calendar .panel {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.calendar .panel th {
+    line-height: 2;
+}
+
+.calendar .panel td {
+    line-height: 1.3;
+}
+
+.calendar .pre-month,
+.calendar .next-month {
+    color: #eee;
+}
+
+.calendar .cur-month {
+    cursor: pointer;
+}
+
+.calendar .cur-month:hover {
+    background-color: #ccc;
+    color: #fff;
+}
+
+.calendar .cur-date {
+    color: #ca2b2b;
+}
+
+.calendar {
+    margin: 10px auto;
+    font-size: 25px;
+}
+
+.date-ipt + .calendar {
+    margin: 0;
+    font-size: 14px;
+}
