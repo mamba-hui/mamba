@@ -1,0 +1,534 @@
+/*基本样式*/
+body {
+    margin: 0;
+    min-width: 1140px;
+    font-size: 14px;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+::selection {
+    background-color: #FBCF33;
+}
+
+.layout {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    padding: 20px 40px;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #FED136;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: #FEC503;
+}
+
+/*导航栏*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(22, 22, 22, .6);
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.navbar .logo {
+    float: left;
+    margin: 15px;
+    font-size: 1.5em;
+    line-height: 40px;
+    color: #FED130;
+}
+
+.navbar .logo:hover {
+    color: #FEC503;
+}
+
+.navbar-nav {
+    float: right;
+    padding: 10px 0;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+}
+
+.navbar-nav .item {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    line-height: 20px;
+}
+
+.navbar-nav .item:hover {
+    color: #F0D136;
+}
+
+.navbar-nav .active .item {
+    color: #fff;
+    background-color: #FEC503;
+}
+
+/*header*/
+#header {
+    text-align: center;
+    color: #fff;
+}
+
+.carousel {
+    position: relative;
+    height: 717px;
+    overflow: hidden;
+}
+
+.carousel .image-wrap {
+    position: absolute;
+    height: 100%;
+}
+
+.carousel .image-wrap li {
+    float: left;
+    height: 100%;
+}
+
+.carousel .image-wrap li img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.carousel .arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.carousel .prev {
+    left: 10px;
+}
+
+.carousel .next {
+    right: 10px;
+}
+
+.carousel .indicator {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    text-align: center;
+    font-size: 0;
+}
+
+.carousel .indicator li {
+    display: inline-block;
+    width: 60px;
+    height: 12px;
+    margin: 10px 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.carousel .indicator li.active {
+    background-color: #FEC503;
+}
+
+#header .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 300px;
+    padding-bottom: 200px;
+}
+
+.intro-lead-in {
+    margin-bottom: 25px;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.intro-heading {
+    margin-bottom: 50px;
+    font-size: 75px;
+    line-height: 75px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/*Service*/
+section > .container {
+    padding: 150px 0;
+    text-align: center;
+    color: #807784;
+}
+
+h2.section-heading {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+h3.section-subheading {
+    margin-bottom: 75px;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+ul.section-items {
+    margin-left: -30px;
+}
+
+ul.section-items > li {
+    float: left;
+    margin-left: 30px;
+    width: 360px;
+}
+
+#services .section-items li a {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #FED136;
+    color: #FFF;
+    font-size: 40px;
+    line-height: 100px;
+}
+
+/*Event*/
+#events {
+    background-color: #F7F7F7;
+    /*width: 100%;*/
+}
+
+.waterfall-ct {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.waterfall-ct .news {
+    position: relative;
+}
+
+.waterfall-ct .item {
+    position: absolute;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #DFDFDF;
+    width: 258px;
+    transition: all 1s;
+}
+
+.waterfall-ct .img-ct {
+    display: block;
+}
+
+.waterfall-ct .img-ct img {
+    width: 258px;
+    vertical-align: middle;
+}
+
+.waterfall-ct h4 {
+    margin: 10px 3px;
+    height: 25px;
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.waterfall-ct .brief {
+    margin: 0 5px;
+    color: #333;
+    font-size: 12px;
+}
+
+#load-more {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#hide {
+    display: none;
+    position: absolute;
+    width: 300px;
+}
+
+/*history*/
+#history .timeline {
+    position: relative;
+    margin-top: -130px;
+    overflow: hidden;
+}
+
+#history .timeline:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 130px;
+    margin: 0 auto;
+    width: 2px;
+    height: 2000px;
+    background-color: #F1F1F1;
+
+}
+
+#history .timeline > li {
+    position: relative;
+    margin-top: 130px;
+}
+
+#history .mate-avatar {
+    width: 156px;
+    height: 156px;
+    border: 7px solid #F1F1F1;
+    border-radius: 50%;
+}
+
+#history .mate-info {
+    position: absolute;
+    width: 350px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#history li:nth-child(2n+1) .mate-info {
+    margin-left: -290px;
+    text-align: right;
+}
+
+#history li:nth-child(2n) .mate-info {
+    margin-left: 290px;
+    text-align: left;
+}
+
+#history .mate-info .time {
+    text-transform: uppercase;
+}
+
+#history .mate-info .time,
+#history .mate-info h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#history .mate-info p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/*teammate*/
+#teammate {
+    background-color: #F7F7F7;
+}
+
+#teammate .avatar-star {
+    width: 226px;
+    height: 226px;
+    border: 7px solid #fff;
+    border-radius: 50%;
+}
+
+#teammate .star-name {
+    margin-top: 25px;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #000;
+}
+
+#teammate .star-byname {
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.75;
+}
+
+ul.social-account > li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+ul.social-account svg {
+    display: block;
+    padding: 0 5px;
+    color: #000;
+    font-size: 44px;
+    line-height: 1;
+}
+
+ul.social-account svg:hover {
+    color: #FED136;
+}
+
+#icon-linledin {
+    font-size: 40px;
+}
+
+#teammate .teammate-text {
+    margin: 50px auto 10px;
+    width: 60%;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+/*aside*/
+aside.clients .container {
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+    align-items: center;
+}
+
+/*contact*/
+#contact {
+    background: url(../images/contact-bg.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+#contact .section-heading {
+    color: #fff;
+}
+
+#contact .basic-info {
+    float: left;
+}
+
+#contact input,
+#contact textarea {
+    display: block;
+    width: 485px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    line-height: 20px;
+    font-family: Arial;
+    font-size: 16px;
+    color: #777;
+}
+
+#contact input {
+    margin: 0 30px 30px 30px;
+}
+
+#contact textarea {
+    margin: 0 30px 30px 0;
+    height: 200px;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: 1px solid #FED136;
+
+}
+
+#contact ::placeholder {
+    text-transform: uppercase;
+    color: #BBB;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/*footer*/
+footer {
+    line-height: 90px;
+}
+
+footer ul.social-account {
+    margin: 0 auto;
+    max-width: 300px;
+    text-align: center;
+}
+
+footer .copyright {
+    float: left;
+    margin-left: 70px;
+}
+
+footer .quicklinks {
+    float: right;
+    margin-right: 70px;
+}
+
+footer .quicklinks a {
+    padding: 0 5px;
+    color: #FED156;
+}
+
+footer .quicklinks a:hover {
+    text-decoration: underline;
+}
+
+.goTop {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    background-color: #333;
+    color: #fff;
+}
+
+.goTop:hover {
+    background-color: #FED156;
+}
+.goTop:after {
+    content: '^';
+    font-weight: 700;
+    font-size: 40px;
+    vertical-align: -15px;
+}
