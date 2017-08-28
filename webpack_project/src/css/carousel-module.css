@@ -1,0 +1,94 @@
+.carousel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.imageWrap {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+}
+
+.imageWrap li {
+    float: left;
+    height: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.imageWrap li:nth-child(1) {
+    background-image: url(../image/item4.jpg);
+}
+.imageWrap li:nth-child(2) {
+    background-image: url(../image/header.jpg);
+}
+
+.imageWrap li:nth-child(3) {
+    background-image: url(../image/item1.jpg);
+}
+
+.imageWrap li:nth-child(4) {
+    background-image: url(../image/item2.jpg);
+}
+
+.imageWrap li:nth-child(5) {
+    background-image: url(../image/item3.jpg);
+}
+
+.imageWrap li:nth-child(6) {
+    background-image: url(../image/item4.jpg);
+}
+.imageWrap li:nth-child(7) {
+    background-image: url(../image/header.jpg);
+}
+
+.arrow {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    margin-top: -30px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.carousel .prev {
+    left: 10px;
+}
+
+.carousel .next {
+    right: 10px;
+}
+
+.carousel .indicator {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    text-align: center;
+    font-size: 0;
+}
+
+.carousel .indicator li {
+    display: inline-block;
+    width: 60px;
+    height: 12px;
+    margin: 10px 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.carousel .indicator li.active {
+    background-color: #FEC503;
+}
