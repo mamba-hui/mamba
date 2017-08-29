@@ -1,0 +1,21 @@
+{
+  "name": "mamba-weather",
+  "version": "1.0.0",
+  "description": "a weather forecast used in Cli",
+  "main": "index.js",
+  "bin": {
+    "weather": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weather",
+    "mamba"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2"
+  }
+}
