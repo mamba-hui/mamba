@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .loading_rect,
+        .loading_rect:before,
+        .loading_rect:after {
+            width: 6px;
+            height: 20px;
+            background-color: #000;
+            animation: loading_rect 1s ease-in-out .16s infinite;
+        }
+
+        .loading_rect {
+            position: absolute;
+            margin: 40px;
+        }
+
+        .loading_rect:before,
+        .loading_rect:after {
+            content: '';
+            position: absolute;
+        }
+
+        .loading_rect:before {
+            margin-left: -12px;
+            animation-delay: 0s;
+        }
+
+        .loading_rect:after {
+            margin-left: 12px;
+            animation-delay: .32s;
+        }
+
+        @keyframes loading_rect {
+            0%,
+            70%,
+            100% {
+                height: 20px;
+                box-shadow: 0 0 #000;
+            }
+            10% {
+                height: 30px;
+                box-shadow: 0 -10px #000;
+            }
+        }
+
+
+        .loading_circle {
+            position: absolute;
+            margin-top: 150px;
+            margin-left: 40px;
+            width: 30px;
+            height: 30px;
+            border: 5px solid rgba(0, 0, 0, .3);
+            border-top-color: #ff3030;
+            border-radius: 50%;
+            animation: loading_circle 1s ease-in-out infinite;
+        }
+
+        @keyframes loading_circle {
+            0% {
+                transform: rotate(0);
+            }
+            10% {
+                transform: rotate(10deg);
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+    </style>
+    <title>Loading</title>
+</head>
+
+<body>
+    <div class="loading_rect"></div>
+    <div class="loading_circle"></div>
+</body>
+
+</html>
