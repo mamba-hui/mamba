@@ -104,18 +104,18 @@ Dialog.prototype = {
 
 $('#open1').on('click', function() {
     var dialog1 = new Dialog();
-    dialog1.open('hello, 这里是饥人谷');
+    dialog1.open('hello, 这里是Dialog');
 });
 
 $('#open2').on('click', function() {
     var dialog2 = new Dialog();
-    dialog2.open('<a href="http://jirengu.com">饥人谷</a>');
+    dialog2.open('<a href="http://jirengu.com">Dialog</a>');
 });
 
 $('#open3').on('click', function() {
     var dialog3 = new Dialog();
     dialog3.open({
-        title: '欢迎来到饥人谷',
+        title: '欢迎来到Dialog',
         message: 'hello',
         isShowCloseBtn: true,
         isShowConfirmBtn: true,
@@ -132,7 +132,7 @@ var tpl = '<ul><li>列表1</li><li>列表2</li><li>列表1</li><li>列表1</li><
 $('#open4').on('click', function() {
     var dialog4 = new Dialog();
     dialog4.open({
-        title: '欢迎来到饥人谷',
+        title: '欢迎来到Dialog',
         message: tpl,
         isShowCloseBtn: true,
         isShowConfirmBtn: true,
@@ -147,7 +147,7 @@ $('#open4').on('click', function() {
 $('#open5').on('click', function() {
     var dialog5 = new Dialog();
     dialog5.open({
-        title: '欢迎来到饥人谷',
+        title: '欢迎来到Dialog',
         message: 'hello',
         isShowCloseBtn: false,
         isShowConfirmBtn: false
